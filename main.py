@@ -70,6 +70,8 @@ def refresh_cookie():
 refresh_cookie()
 index = 1
 lastTime = int(time.time()) - 30
+logging.info(f"⏱️ 一共需要阅读 {READ_NUM} 次...")
+
 while index <= READ_NUM:
     data.pop('s')
     data['b'] = random.choice(book)
@@ -106,3 +108,4 @@ logging.info("🎉 阅读脚本已完成！")
 if PUSH_METHOD not in (None, ''):
     logging.info("⏱️ 开始推送...")
     push(f"🎉 微信读书自动阅读完成！\n⏱️ 阅读时长：{(index - 1) * 0.5}分钟。", PUSH_METHOD)
+    
