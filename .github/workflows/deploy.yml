@@ -6,10 +6,9 @@ concurrency:
 
 on:
   schedule:
-    # 凌晨任务：北京时间每天 01:00（UTC 前一天 17:00）
-    - cron: '0 17 * * *'
-    # 早间任务：北京时间每天 04:00（UTC 前一天 20:00）
-    - cron: '0 20 * * *'
+    # Daily at 03:00 and 06:00 Adelaide time, including daylight saving.
+    - cron: '0 3,6 * * *'
+      timezone: 'Australia/Adelaide'
     # # 午间任务：北京时间每天 11:40（UTC 03:40）
     # - cron: '40 3 * * *'
     # # 晚间任务：北京时间每天 22:00（UTC 14:00）
