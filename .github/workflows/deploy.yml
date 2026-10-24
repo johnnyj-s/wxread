@@ -6,11 +6,9 @@ concurrency:
 
 on:
   schedule:
-    # Daily at 03:00 and 06:00 Adelaide time, including daylight saving.
-    - cron: '0 3 * * *'
-      timezone: 'Australia/Adelaide'
-    - cron: '0 6 * * *'
-      timezone: 'Australia/Adelaide'
+    # Daily at 03:30 and 06:30 Adelaide time
+    - cron: '0 18 * * *'
+    - cron: '0 21 * * *'
     # # 午间任务：北京时间每天 11:40（UTC 03:40）
     # - cron: '40 3 * * *'
     # # 晚间任务：北京时间每天 22:00（UTC 14:00）
