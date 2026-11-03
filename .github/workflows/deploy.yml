@@ -5,14 +5,7 @@ concurrency:
   cancel-in-progress: true    # 取消任何正在进行的相同并发组的工作流
 
 on:
-  schedule:
-    # Daily at 03:30 and 06:30 Adelaide time
-    - cron: '0 18 * * *'
-    - cron: '0 21 * * *'
-    # # 午间任务：北京时间每天 11:40（UTC 03:40）
-    # - cron: '40 3 * * *'
-    # # 晚间任务：北京时间每天 22:00（UTC 14:00）
-    # - cron: '0 14 * * *'
+  # Triggered by macOS launchd at 03:30 and 06:30 Australia/Adelaide.
   workflow_dispatch:  # 手动触发
 
 jobs:
